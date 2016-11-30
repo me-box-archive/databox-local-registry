@@ -1,0 +1,34 @@
+{
+  "name": "databox-local-registry",
+  "version": "0.1.0",
+  "description": "Databox driver to log local os",
+  "scripts": {
+    "start": "echo 'Not startable'",
+    "build": "docker build -t databox/databox-local-registry .",
+    "deploy": "docker tag databox/databox-local-registry toshdatabox/databox-local-registry && docker push toshdatabox/databox-local-registry",
+    "clean": "node ./node_modules/modclean/bin/modclean.js -p ./node_modules/ -r",
+    "getshell": "docker exec -i -t databox-local-registry /bin/bash",
+    "kill": "docker kill databox-local-registry",
+    "attach": "docker attach databox-local-registry",
+    "shell": "docker run -i -t databox/databox-local-registry /bin/bash",
+    "local": "docker run -i -t databox/databox-local-registry",
+    "tail": "docker logs -f databox-local-registry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/me-box/.git"
+  },
+  "keywords": [
+    "docker",
+    "personal",
+    "data"
+  ],
+  "author": "Anthony Brown <Anthony.Brown@nottingham.ac.uk> ()",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/me-box//issues"
+  },
+  "homepage": "https://github.com/me-box/",
+  "dependencies": {
+  }
+}
