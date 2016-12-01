@@ -1,4 +1,5 @@
 version: 0.1
+standalone: false
 log:
   fields:
     service: registry
@@ -9,6 +10,9 @@ storage:
     rootdirectory: /var/lib/registry
 http:
   addr: :5000
+  tls:
+    certificate: /public.crt
+    key: /private.key
   headers:
     X-Content-Type-Options: [nosniff]
 health:

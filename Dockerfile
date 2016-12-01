@@ -2,7 +2,7 @@
 
 FROM alpine:3.4
 
-LABEL databox.type="driver"
+LABEL databox.type="registry"
 
 RUN set -ex \
     && apk add --no-cache ca-certificates apache2-utils
