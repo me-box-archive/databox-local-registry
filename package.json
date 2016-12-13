@@ -5,7 +5,7 @@
   "scripts": {
     "start": "echo 'Not startable'",
     "build": "docker build -t databox/databox-local-registry .",
-    "deploy": "docker tag databox/databox-local-registry toshdatabox/databox-local-registry && docker push toshdatabox/databox-local-registry",
+    "deploy": "docker tag databox/databox-local-registry toshdatabox/databox-local-registry:latest && docker push toshdatabox/databox-local-registry:latest",
     "clean": "node ./node_modules/modclean/bin/modclean.js -p ./node_modules/ -r",
     "getshell": "docker exec -i -t databox-local-registry /bin/bash",
     "kill": "docker kill databox-local-registry",
