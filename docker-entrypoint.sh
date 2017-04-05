@@ -2,12 +2,8 @@
 
 set -e 
 
-echo "--------------------------------" 
-echo "$HTTP_TLS_CERTIFICATE" 
-echo "--------------------------------" 
-
-echo "$HTTP_TLS_CERTIFICATE" > /public.crt
-echo "$HTTP_TLS_KEY" > /private.key
+echo "$HTTPS_SERVER_CERT" > /public.crt
+echo "$HTTPS_SERVER_PRIVATE_KEY" > /private.key
 
 case "$1" in
     *.yaml|*.yml) set -- registry serve "$@" ;;
